@@ -5,20 +5,20 @@ import Snowfall from 'react-snowfall'
 
 import { useAudio } from './../hooks/useAudio';
 
-const Card = () => {
+const Card = ({card}) => {
 
 	const {id} = useParams();
-	const [card, setCard] = useState(null);
 	const [isOpen, setIsOpen] = useState(false);
-	const [isPlaying, play, pause] = useAudio('/assets/audio/jingle-bells.mp3');
+	const [isPlaying, play, pause] = useAudio(`/assets/audio/${card.music}.mp3`);
 
-	useEffect(() => {  
-		fetch(`https://xmas-api.itgirls.cz/cards/${id}`)
-		.then(response => response.json())
-		.then(data => {
-			setCard(data.data)
-		})
-	}, [])
+	// useEffect(() => {  
+	// 	fetch(`https://xmas-api.itgirls.cz/cards/${id}`)
+	// 	.then(response => response.json())
+	// 	.then(data => {
+	// 		setCard(data.data)			
+	// 		
+	// 	})
+	// }, [])
 
 	const openCard = (e) => {
 		setIsOpen(!isOpen)
@@ -43,14 +43,14 @@ const Card = () => {
 		// 	Takže třeba zlaté pozadí bude:
 		// 	<div class="background background--gold">
 		//  -->
-		card !== null ? (
+		//card !== null && (
 			<>		
 
 			<div className={`background background--${card.background}`} >
 				<button className="button button--gold" onClick={handlePlayClick}>Přehraj hudbu</button>
 				<button className="button button--gold" onClick={handlePauseClick}>Zastav hudbu</button>
 				<br/>
-				<p className="instructions">Kliknutím mě otevři</p>
+				<p className="instructions">{isOpen ? "Kliknutím mě zavři" : "Kliknutím mě otevři"}</p>
 				<br/>
 				<div className="snow">
 					<Snowfall snowflakeCount={card.snow} />
@@ -98,7 +98,7 @@ const Card = () => {
 							<div className="inside-left__text">{card.text}</div>
 							<div className="inside-left__sender">{card.sender}</div>
 						</div>
-						<img className="inside-left__logo" src="/assets/images/czechitas.svg" alt="Czechitas" />
+						{/* <img className="inside-left__logo" src="/assets/images/czechitas.svg" alt="Czechitas" /> */}
 				</div>
 
 					{/* <!--
@@ -126,7 +126,7 @@ const Card = () => {
 				
 			 {/* <!-- konec .background --> */}
 			</>
-		) : null
+		//)
 
 	)
 	
