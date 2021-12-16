@@ -109,9 +109,9 @@ const Card = () => {
 					--> */}
 					<div className="inside-right">
 						<div className="photo photo1"><img src="/assets/images/photos/photo1.jpg" /></div>
-						<div className="photo photo2"><img src="/assets/images/photos/photo2.jpg" /></div>
-						<div className="photo photo3"><img src="/assets/images/photos/photo3.jpg" /></div>
-						<div className="photo photo4"><img src="/assets/images/photos/photo4.jpg" /></div>
+						<div className="photo photo2"><img src="/assets/images/photos/photo3.jpg" /></div>
+						<div className="photo photo3"><img src="/assets/images/photos/butter.jpg" /></div>
+						<div className="photo photo4"><img src="/assets/images/photos/kittens.jpg" /></div>
 					</div>
 
 				</div>
