@@ -14,16 +14,19 @@ const OptionsMusic = ({handleMusic}) => {
             {
                 configuration.music.map(music => 
                     <div key={music.value} className="field__radio">
+
                         <input
                             onChange={handleChange}
                             type="radio"
                             name="music"
                             id={`music-${music.value}`}
                             value={music.value}
-                            />
+                        />
+
                         <label
                             htmlFor={`music-${music.value}`}>
                             {music.description}
+                            
                         </label>
                     </div>)
             }

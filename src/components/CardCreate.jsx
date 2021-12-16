@@ -7,18 +7,18 @@ import Configurator from './Configurator';
 const CardCreate = () => {
 	   return (
 		   <>
-		   <Menu />
-		   	<Header title={"Vytvořit přáníčko"}/>
-			<main className="content">
+			<Menu />
+			<Header title={"Vytvořit přáníčko"}/>
+				<main className="content">
 
-				<div className="box">
-					<div className="box__inside">
-						<Configurator />
+					<div className="box">
+						<div className="box__inside">
+							<Configurator />
+						</div>
 					</div>
-				</div>
 
-			</main>
-		</>	
+				</main>
+			</>	
     )
 }
 

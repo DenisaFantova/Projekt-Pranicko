@@ -7,7 +7,6 @@ import Loader from './Loader';
 const FetchData = () => {
 
 	const {id} = useParams();
-
     const [card, setCard] = useState(null);
 
     useEffect(() => {  

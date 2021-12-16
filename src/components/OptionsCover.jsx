@@ -15,16 +15,17 @@ const OptionsCover = ({handleCover}) => {
                 configuration.covers.map(cover => 
                     <div key={cover.value} className="field__swatch">
                     <input
-                    onChange={handleChange}
-                    type="radio"
-                    name="cover"
-                    id={`cover-${cover.value}`}
-                    value={cover.value}
+                        onChange={handleChange}
+                        type="radio"
+                        name="cover"
+                        id={`cover-${cover.value}`}
+                        value={cover.value}
                     />
                     <label
-                    htmlFor={`cover-${cover.value}`}
-                    className={`swatch--cover-${cover.value}`}
-                    data-description={cover.description}></label>
+                        htmlFor={`cover-${cover.value}`}
+                        className={`swatch--cover-${cover.value}`}
+                        data-description={cover.description}>
+                    </label>
             </div>)
             }
         </>

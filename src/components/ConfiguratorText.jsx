@@ -11,11 +11,13 @@ const ConfiguratorText = ({handleText}) => {
 
     return (
         <div className="field">
+
             <label
             className="field__label"
             htmlFor="text">
             Text uvnitř přáníčka
             </label>
+
             <textarea
             onChange={handleChange}
             className="field__input"
@@ -25,7 +27,9 @@ const ConfiguratorText = ({handleText}) => {
             maxLength="100"
             autoComplete="off">
             </textarea>
+
             <p className="field__description">Zbývá <strong>{100 - text.length}</strong>/100 znaků.</p>
+            
         </div>
     )
 }

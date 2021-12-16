@@ -14,17 +14,21 @@ const OptionsColor = ({handleColor}) => {
             {
                 configuration.colors.map(color => 
                     <div key={color.value} className="field__swatch">
+                        
                         <input
-                        onChange={handleChange}
-                        type="radio"
-                        name="color"
-                        id={`color-${color.value}`}
-                        value={color.value}
+                            onChange={handleChange}
+                            type="radio"
+                            name="color"
+                            id={`color-${color.value}`}
+                            value={color.value}
                         />
+
                         <label
-                        htmlFor={`color-${color.value}`}
-                        className={`swatch--${color.value}`}
-                        data-description={color.description}></label>
+                            htmlFor={`color-${color.value}`}
+                            className={`swatch--${color.value}`}
+                            data-description={color.description}>
+                        </label>
+                        
                     </div>)
             }
         </>

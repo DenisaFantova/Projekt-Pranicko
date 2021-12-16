@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Route, Link } from 'react-router-dom'
 
 import ConfiguratorBackground from './ConfiguratorBackground'
 import ConfiguratorColor from './ConfiguratorColor'
@@ -8,7 +7,6 @@ import ConfiguratorSnow from './ConfiguratorSnow'
 import ConfiguratorMusic from './ConfiguratorMusic'
 import ConfiguratorText from './ConfiguratorText'
 import ConfiguratorSender from './ConfiguratorSender'
-import CardReady from './CardReady'
 
 const Configurator = () => {
 
@@ -68,8 +66,7 @@ const Configurator = () => {
         data?.data?.id &&  window.location.replace(`${window.location.protocol}//${window.location.hostname}${window.location.port && ':' + window.location.port}/pranicko-je-pripravene/${data.data.id}`)
         data.success === false && setErrors(data.errors)        
         })
-    }
-    
+    }    
 
     return (
         <form className="configurator">
@@ -82,10 +79,10 @@ const Configurator = () => {
             <ConfiguratorText handleText={handleText} />            
             <ConfiguratorSender handleSender={handleSender} />
 
-            {/* <!-- tlačítko pro odeslání --> */}
 
             {errors !== null && errors.map((error, index) => <p key={`${index}${error}`}>{error}</p>)}
 
+            {/* <!-- tlačítko pro odeslání --> */}
             <button onClick={handleClick} type="submit" className="button button--gold button--big mt-30">Uložit přáníčko</button>
 
         </form>
