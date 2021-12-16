@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {useParams} from 'react-router-dom';
 
 import Card from './Card'
+import Loader from './Loader';
 
 const FetchData = () => {
 
@@ -20,7 +21,7 @@ const FetchData = () => {
     return (
         <>
             {
-                card !== null || undefined ? <Card card={card} /> : <p>Načítám data</p>
+                card !== null || undefined ? <Card card={card} /> : <Loader />
             }
         </>
     )
