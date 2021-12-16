@@ -9,8 +9,9 @@ import {
 import './style.css';
 
 import Home from './components/Home';
-import CreateCard from './components/CreateCard';
-import PickUpCard from './components/PickUpCard';
+import CardCreate from './components/CardCreate';
+import CardPickUp from './components/CardPickUp';
+import CardReady from './components/CardReady';
 import Card from './components/Card'
 <com></com>
 
@@ -19,8 +20,9 @@ const App = () => (
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />}/>
-      <Route path="/vytvorit-pranicko" element={< CreateCard/>} />
-      <Route path="/vyzvednout" element={< PickUpCard/>} />
+      <Route path="/vytvorit-pranicko" element={<CardCreate />} />
+      <Route path="/vyzvednout" element={<CardPickUp />} />
+      <Route path="/pranicko-je-pripravene/:id" element={<CardReady />}/>
       <Route path="/card/:id" element={<Card />} />
     </Routes>
 

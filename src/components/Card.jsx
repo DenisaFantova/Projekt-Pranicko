@@ -47,14 +47,13 @@ const Card = () => {
 			<>		
 
 			<div className={`background background--${card.background}`} >
-				<p>Hudba právě { isPlaying ? 'hraje' : 'nehraje' }.</p>
-				<button className="button button--gold" onClick={handlePlayClick}>Spustit hudbu</button>
-				<button className="button button--gold" onClick={handlePauseClick}>Zastavit</button>
+				<button className="button button--gold" onClick={handlePlayClick}>Přehraj hudbu</button>
+				<button className="button button--gold" onClick={handlePauseClick}>Zastav hudbu</button>
 				<br/>
 				<p className="instructions">Kliknutím mě otevři</p>
 				<br/>
 				<div className="snow">
-					<Snowfall snowflakeCount={`${card.snow}00`} />
+					<Snowfall snowflakeCount={card.snow} />
 					{/* <!--
 						Pokud chceš, tak sem vložíš sníh, který bude padat na pozadí.
 

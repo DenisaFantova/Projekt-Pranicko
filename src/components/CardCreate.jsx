@@ -4,7 +4,7 @@ import Menu from './Menu';
 import Header from './Header';
 import Configurator from './Configurator';
 
-const CreateCard = () => {
+const CardCreate = () => {
 	   return (
 		   <>
 		   <Menu />
@@ -22,4 +22,4 @@ const CreateCard = () => {
     )
 }
 
-export default CreateCard
+export default CardCreate
