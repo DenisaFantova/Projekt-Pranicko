@@ -22,10 +22,10 @@ const OptionsBackground = ({handleBackground}) => {
                     value={background.value}
                 />
 
-                <label>                
+                <label              
                     htmlFor={`background-${background.value}`}
                     className={`swatch--${background.value}`}
-                    data-description={background.description}
+                    data-description={background.description}>
                 </label>
             </div>)
         }
